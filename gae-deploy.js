@@ -6,7 +6,8 @@ var sh              = require('shelljs')
 var win             = require('os').platform() === 'win32'
 var path            = require('path')
 
-module.exports = function (p) {
+module.exports = function (_p) {
+  var p = _p || {}
   var sdkDir = p.sdkDir || path.join('..', 'appengine-java-sdk')
   var sdkVer = p.sdkVer || '1.9.32'
   var tmpDir = p.tmpDir || 'tmp'
