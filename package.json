@@ -6,6 +6,9 @@
   "license": "MIT",
   "main": "gae-deploy.js",
   "scripts": {},
+  "files": [
+    "gae-deploy.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/kirillgroshkov/node-gae-deploy.git"
