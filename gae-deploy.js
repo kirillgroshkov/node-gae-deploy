@@ -41,6 +41,9 @@ module.exports = function (_p) {
             console.log('downloaded, moving to ' + sdkDir)
             fs.renameSync(path.join(tmpDir, 'appengine-java-sdk-' + sdkVer), sdkDir)
             del.sync(tmpDir)
+
+            fs.chmodSync(appcfgPath, '751')
+
             console.log('sdk done!')
             cb()
           })
